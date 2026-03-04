@@ -28,6 +28,7 @@ public class PersonServices {
     }
 
     public List<Person> findAll(){
+        //Logger.info("Finding all People!");
         List<Person> persons = new ArrayList<Person>();
 
         //Mock para teste
@@ -39,6 +40,21 @@ public class PersonServices {
         return persons;
     }
 
+    public Person create(Person person){
+        //Logger.info("Creating one Person");
+        return person;
+    }
+
+    public Person update(Person person){
+        //Logger.info("Updating one Person");
+        return person;
+    }
+
+    public void delete(String id){
+        //Logger.info("Deleting one Person");
+    }
+
+    //Metodo para criar mock
     private Person mockPerson(int i){
         Person person = new Person();
         person.setId(counter.incrementAndGet());
