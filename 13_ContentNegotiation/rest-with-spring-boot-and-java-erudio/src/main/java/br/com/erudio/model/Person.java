@@ -21,10 +21,10 @@ public class Person implements Serializable { //Serializable habilita a convers√
     @Column(name="last_name", nullable=false, length=80)
     private String lastName;
 
-    @Column(nullable=false, length=100)
+    @Column(nullable=true, length=100)
     private String address;
 
-    @Column(nullable=false, length=7)
+    @Column(nullable=true, length=7)
     private String gender;
 
     public Person() {}
