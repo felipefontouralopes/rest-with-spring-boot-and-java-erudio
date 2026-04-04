@@ -1,7 +1,6 @@
-package br.com.erudio.data.dto.v1;
+package br.com.erudio.data.dto;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class PersonDTO implements Serializable { //Serializable habilita a conversão do objeto em fluxo de dados
@@ -13,7 +12,6 @@ public class PersonDTO implements Serializable { //Serializable habilita a conve
     private String lastName;
     private String address;
     private String gender;
-    private LocalDateTime createdAt;
 
     public PersonDTO() {}
 
@@ -57,22 +55,14 @@ public class PersonDTO implements Serializable { //Serializable habilita a conve
         this.gender = gender;
     }
 
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (!(o instanceof PersonDTO person)) return false;
-        return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getGender(), person.getGender()) && Objects.equals(getCreatedAt(), person.getCreatedAt());
+        return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstName(), person.getFirstName()) && Objects.equals(getLastName(), person.getLastName()) && Objects.equals(getAddress(), person.getAddress()) && Objects.equals(getGender(), person.getGender());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName(), getAddress(), getGender(), getCreatedAt());
+        return Objects.hash(getId(), getFirstName(), getLastName(), getAddress(), getGender());
     }
 }

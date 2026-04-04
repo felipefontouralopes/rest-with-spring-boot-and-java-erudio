@@ -47,15 +47,6 @@ public class PersonServices {
     public PersonDTO create(PersonDTO person){
         logger.info("Criando uma pessoa!");
 
-        Person person2 = new Person.Builder()
-                .nome(person.getFirstName()
-                .lastname(person.getLastName()
-                        .build();
-        )
-
-        repository.save(person2)
-                return responsePerson
-
         //return repository.save(person);
         var entity = ObjectMapper.parseObject(person, Person.class);
         return ObjectMapper.parseObject(repository.save(entity), PersonDTO.class);

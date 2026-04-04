@@ -17,6 +17,7 @@ public class PersonMapper {
         dto.setAddress(person.getAddress());
         dto.setGender(person.getGender());
         dto.setBirthDay(new Date()); //Criaremos um mock para date. Porém, o correto seria adicionar este campo na entidade (lembrando de defini-lo como nullable=true)
+        dto.setCreatedAt(person.getCreatedAt());
 
         return dto;
     }
@@ -28,6 +29,7 @@ public class PersonMapper {
         entity.setLastName(person.getLastName());
         entity.setAddress(person.getAddress());
         entity.setGender(person.getGender());
+        entity.setCreatedAt(person.getCreatedAt());
         //entity.setBirthDay(new Date());
         return entity;
     }
